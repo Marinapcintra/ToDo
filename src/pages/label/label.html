@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>TAGS</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+          <p style="font-weight:bold;">Edit your tasks by priority</p>
+        </ion-item>
+        <ion-item [color]="c.name" *ngFor="let c of colorList; let i=index" >
+            <ion-label>
+              {{c.description}}
+            </ion-label>
+            <ion-checkbox color="light" checked="false" (ionChange)="showColor(c,i)"></ion-checkbox>        
+            <ion-icon name="create" item-end></ion-icon>
+        </ion-item>
+                
+      </ion-list>
+
+
+</ion-content>

@@ -1,0 +1,62 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{newsTitle | date: 'EEEE, dd MMM' }}
+    </ion-title>
+    <button ion-button clear icon-only (click)="logout()" class="logout">
+      <ion-icon name="exit"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="content-background">
+
+  <div class="button-background">
+      <ion-row>
+        <ion-col col-10 class="grid">
+          <button ion-button color="light">
+            <ion-input type="text" placeholder="+add a new task"></ion-input>
+          </button>
+        </ion-col>
+        <ion-col col-2 class="grid">
+          <button ion-button clear float-right item-end (click)="openModal()">
+            <ion-icon name="add-circle" class="grid"></ion-icon>
+          </button>
+        </ion-col>
+      </ion-row>
+  </div>
+
+  <ion-list>
+      
+      <ion-item *ngFor="let task of tasks; let i=index" class="list-layout">
+        <!-- 
+          O Angular permite que todos os atributos de um elemento possam receber variáveis ou pedaços de códigos, como o atributo name abaixo.
+          Para fazer isso basta colocar os atributos entre colchetes: [name]
+        -->
+        <ion-icon item-start 
+          [name]="task.done ? 'checkmark-circle-outline' : 'radio-button-off'"
+          (click)="markAsDone(task)">
+        </ion-icon>
+  
+        <span (click)="openModal(task.description, i)">
+          {{ task.description }}
+        </span>
+  
+        <ion-icon item-end name="close"
+          (click)="deleteTask(i)">
+        </ion-icon>
+      </ion-item>
+  
+      <!-- 
+        Quando usamos o sinal de negação para numbers essas são as operações boolean equivalentes:
+          !0 === false
+          !1 === true 
+        
+        Ou seja, o elemento abaixo soó vai aparecer quando a lista estiver vazia (length === 0)
+      -->
+      
+    </ion-list>
+
+  
+
+  </ion-content>

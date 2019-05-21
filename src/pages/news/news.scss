@@ -1,0 +1,41 @@
+page-news {
+
+    ion-title{
+        text-align: center;
+    }
+
+    .content-background{
+        background-color: lightgray; 
+    }
+
+    .list-layout{ 
+        background-color: lightgray;
+        border-block-end: 2em;
+    }
+
+    .button-background{
+        background-color: gainsboro; 
+        height: 60px;
+    }
+    
+    .button{
+        border-radius: 10px;
+        height: 2.4em;
+    }
+
+    .text-input{
+        font-size: 1.1em;
+    }
+
+    
+    .enviar{
+        text-align: end !important;
+    }
+
+    .logout{
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    
+    }

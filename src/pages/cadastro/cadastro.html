@@ -1,0 +1,28 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-input type="text" placeholder="Email" #usuario></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input type="password" placeholder="Password" #senha></ion-input>
+          </ion-item>
+        </ion-list>
+        <button ion-button color="light" block (click)="cadastrar()" class="button">Cadastrar</button>
+
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-card>
+    <ion-content padding>
+
+        <ion-input [(ngModel)]="description" type="text" placeholder="I want to..."></ion-input>
+        
+        <button ion-button round [color]="color" item-start small (click)="addLabel()" class="label">
+            {{label}}
+        </button>
+
+        <p style="font-size: 0.8em; margin-top:8px">REMIND ME ABOUT THIS</p>
+      
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <button ion-button outline icon-start>
+                <ion-icon name="calendar"></ion-icon>
+                Set time
+              </button>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <button ion-button outline icon-start>
+                <ion-icon name="cafe"></ion-icon>
+                Tomorrow, 09:00
+              </button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <button ion-button outline icon-start>
+                <ion-icon name="sync"></ion-icon>
+                Daily, weekly...
+              </button>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+            <ion-item>
+              <button ion-button outline icon-start>
+                <ion-icon name="pin"></ion-icon>
+                Add a location
+              </button>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      
+        <button ion-button item-end (click)="addTask()">
+          Adicionar
+        </button>
+      
+      </ion-content>
+</ion-card>

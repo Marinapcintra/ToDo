@@ -38,17 +38,21 @@
           </ion-col>
           <ion-col>
             <ion-item>
-              <button ion-button outline icon-start>
+              <button ion-button outline icon-start (click)="showLoc = !showLoc">
                 <ion-icon name="pin"></ion-icon>
                 Add a location
               </button>
             </ion-item>
           </ion-col>
         </ion-row>
+
+        <p>{{ selectedLocation }}</p>
       
         <button ion-button item-end (click)="addTask()">
           Adicionar
         </button>
       
+        <google-places (setAddress)="getAddress($event)" *ngIf="showLoc"></google-places>
       </ion-content>
+
 </ion-card>

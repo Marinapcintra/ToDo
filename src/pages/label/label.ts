@@ -1,12 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
 
-/**
- * Generated class for the LabelPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
@@ -37,14 +32,5 @@ export class LabelPage {
     this.viewCtrl.dismiss(this.colorList[i]);
   }
 
-  /*getData = data =>{
-    return new Promise((resolve, reject) => {
-    for (let c of this.colorList) {
-      this.data = data;
-    }
-    resolve();
-    });
-    };
-    */
 
 }

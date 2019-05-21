@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, ViewController, ModalController } from 'ionic-angular';
 
-
 @IonicPage()
 @Component({
   selector: 'page-modal',
@@ -14,6 +13,9 @@ export class ModalPage {
 
   public color: string = 'primary';
   public label: string = 'Add Label';
+
+  public showLoc = false;
+  public selectedLocation: string;
 
   constructor(public navCtrl: NavController,
               public viewCtrl: ViewController,
@@ -44,5 +46,10 @@ export class ModalPage {
 
     });
     myModal.present();
+  }
+
+  getAddress(address) {
+    this.selectedLocation = address.formatted_address;
+    this.showLoc = false;
   }
 }

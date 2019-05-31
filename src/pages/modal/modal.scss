@@ -14,8 +14,29 @@ page-modal {
     .item-button {
         padding: 0 0.5em;
         height: 30px !important;
-        width: 133px;
+        width: 90%;
         font-size: 1.3rem;
+        border-color: #1a237e;
+        color: white;
+        background-color: #1a237e;        
+    }
+
+    .button-block-new{
+        border-radius: 20px;
+        height: 2.8em;
+        font-size: 1.6rem;
+        color: #fff;
+        background-color: #1a237e;
+        margin: 0.4rem 0.2rem;
+        padding: 0 1em;
+        width: 90%;
+        display: block;
+        margin: auto;
+        margin-top: 16px;
+    }
+
+    .col {
+        padding: 0;
     }
 
     .text-input{
@@ -26,7 +47,103 @@ page-modal {
     .button-small{
         height: 1.3em;
         font-size: 1.1rem;
-        width: 7em;
+        width: 7em;       
     /* padding: 0 0.9em; */
     }
+
+    .item-inner {
+
+        padding-right: 8px;
+        padding-right: 8px;
+        border: 1px solid;
+    }
+
+    .input{
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;
+        background-color: #d3d3d37a;
+        width: 100%;
+        border-radius: 8px;
+        border: 0px !important;
+    }
+
+    .showcard{
+        border: 1px solid lightgray;
+        border-radius: 4px;
+    }
+
+    .ng-untouched{
+        width: 100% !important;
+    }
+    
+    .datetime{
+        padding: 11px 0px 11px 0px !important;
+    }
+
+    .col2{
+        display: block;
+        margin: auto;
+    }
+
+    
+    .button-subtask{
+        padding: 0;
+        margin-top: 8px;
+        border-color: #BDBDBD;
+    }
+
+    .petrus .text-input {
+        font-size: 1.0em;
+        margin-bottom: 11px;
+    }
+
+    .input{
+        padding: 0;
+    }
+
+         
+    .card-content-notes{
+        padding-right: 0px;
+        padding-left: 0px;
+
+    }
+
+    .myitem{
+        background-color: #d3d3d37a;
+        border-radius: 8px;
+        margin-bottom: 6px;
+        color:  #1a237e;
+    }
+
+    .toggle-checked .toggle-icon{
+        background-color: #5c7ab0ba !important;
+    }
+
+    .toggle-checked .toggle-inner {
+        background-color: #1a237e !important;
+    }
+
+    .datetime-text{
+        color: #1a237e !important;
+    }
+
+    .label{
+        margin: 0px;
+    }
+
+    .loc{
+        padding-left: 0px !important;
+    }
+
+    .item-block .item-inner{
+        padding-right: 0px !important;
+    }
+
+    .maps{
+        border-radius: 8px;
+        margin-bottom: 6px;
+    }
+
+    
 }

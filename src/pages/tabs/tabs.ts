@@ -1,19 +1,20 @@
-import { Component } from '@angular/core';
-
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
-import { HomePage } from '../home/home';
+import { Component, ViewChild } from '@angular/core';
+import { Tabs, App} from 'ionic-angular';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  @ViewChild('myTabs') tabRef:Tabs;
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  tab1Root = "NewsPage";
+  tab2Root = "CalendarPage";
+  tab3Root = "SettingsPage";
+  public nav : any;
 
-  constructor() {
-
+  constructor(public app: App) {
+     this.nav = this.app.getActiveNav();
+     let result = this.nav.getActive();
+     console.log(result);
   }
 }

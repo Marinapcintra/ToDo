@@ -45,10 +45,14 @@ $colors: (
   study: #6699ff,
   personal: #5454eb,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  label:  #1a237e
 );
 
-
+.tabs-md.tab-button[aria-selected=true] {
+  color: #1a237e;
+  padding: 0;
+}
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here

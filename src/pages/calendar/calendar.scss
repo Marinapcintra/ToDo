@@ -1,0 +1,17 @@
+page-calendar {
+
+    .monthview-selected[_ngcontent-c1] {
+        background-color: #1A237E;
+        color: white;
+    }
+
+    .table-bordered[_ngcontent-c1] > thead[_ngcontent-c1] > tr[_ngcontent-c1] > th[_ngcontent-c1], .table-bordered[_ngcontent-c1] > tbody[_ngcontent-c1] > tr[_ngcontent-c1] > th[_ngcontent-c1], .table-bordered[_ngcontent-c1] > tfoot[_ngcontent-c1] > tr[_ngcontent-c1] > th[_ngcontent-c1], .table-bordered[_ngcontent-c1] > thead[_ngcontent-c1] > tr[_ngcontent-c1] > td[_ngcontent-c1], .table-bordered[_ngcontent-c1] > tbody[_ngcontent-c1] > tr[_ngcontent-c1] > td[_ngcontent-c1], .table-bordered[_ngcontent-c1] > tfoot[_ngcontent-c1] > tr[_ngcontent-c1] > td[_ngcontent-c1] {
+        border: 1px solid #ddd;
+        border-radius: 8px;
+    }
+
+    .monthview-primary-with-event[_ngcontent-c1] {
+        background-color: #afafaf;
+        color: white;
+    }
+}

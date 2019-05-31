@@ -11,7 +11,7 @@
         </ion-item>
         <ion-item [color]="c.name" *ngFor="let c of colorList; let i=index" >
             <ion-label>
-              {{c.description}}
+              {{c.colorDescription}}
             </ion-label>
             <ion-checkbox color="light" checked="false" (ionChange)="showColor(c,i)"></ion-checkbox>        
             <ion-icon name="create" item-end></ion-icon>

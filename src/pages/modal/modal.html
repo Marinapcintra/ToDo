@@ -1,58 +1,99 @@
-<ion-card>
-    <ion-content padding>
+<ion-content padding>
 
-        <ion-input [(ngModel)]="description" type="text" placeholder="I want to..."></ion-input>
-        
-        <button ion-button round [color]="color" item-start small (click)="addLabel()" class="label">
-            {{label}}
-        </button>
+  <ion-card>
 
-        <p style="font-size: 0.8em; margin-top:8px">REMIND ME ABOUT THIS</p>
-      
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <button ion-button outline icon-start>
-                <ion-icon name="calendar"></ion-icon>
-                Set time
-              </button>
-            </ion-item>
-          </ion-col>
-          <ion-col>
-            <ion-item>
-              <button ion-button outline icon-start>
-                <ion-icon name="cafe"></ion-icon>
-                Tomorrow, 09:00
-              </button>
-            </ion-item>
-          </ion-col>
-        </ion-row>
-        <ion-row>
-          <ion-col>
-            <ion-item>
-              <button ion-button outline icon-start>
-                <ion-icon name="sync"></ion-icon>
-                Daily, weekly...
-              </button>
-            </ion-item>
-          </ion-col>
-          <ion-col>
-            <ion-item>
-              <button ion-button outline icon-start (click)="showLoc = !showLoc">
-                <ion-icon name="pin"></ion-icon>
-                Add a location
-              </button>
-            </ion-item>
-          </ion-col>
-        </ion-row>
+    <ion-input [(ngModel)]="description" type="text" placeholder="I want to..." style="background-color:transparent"></ion-input>
+    <button ion-button round small [color]="color" (click)="addLabel()" item-start>
+      {{label}}
+    </button>
 
-        <p>{{ selectedLocation }}</p>
-      
-        <button ion-button item-end (click)="addTask()">
-          Adicionar
-        </button>
-      
-        <google-places (setAddress)="getAddress($event)" *ngIf="showLoc"></google-places>
-      </ion-content>
+    <p style="font-size: 0.8em; margin: 11px 0px 9px 0px">REMIND ME ABOUT THIS</p>
 
-</ion-card>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <button ion-button outline icon-start (click)="setDate()">
+            <ion-icon name="calendar"></ion-icon>
+            Set date
+          </button>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button ion-button outline icon-start (click)="setTime()">
+            <ion-icon name="alarm"></ion-icon>
+            Set time
+          </button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <button ion-button outline icon-start>
+            <ion-icon name="sync"></ion-icon>
+            Daily, weekly...
+          </button>
+        </ion-item>
+      </ion-col>
+      <ion-col>
+        <ion-item>
+          <button ion-button outline icon-start (click)="showLoc = !showLoc">
+            <ion-icon name="pin"></ion-icon>
+            Add a location
+          </button>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+
+
+
+  </ion-card>
+ 
+  <button *ngIf="New == true" ion-button block item-end (click)="addTask()" class="button-block-new"> Add </button>
+  <button *ngIf="New == false" block item-end (click)="editTask()" class="button-block-new"> Edit </button>
+    
+
+  <ion-card>
+    <ion-card-title style="font-size: 0.8em; margin: 8px 0px 8px 0px">
+      SUBTASKS
+      <button ion-button color="light" block outline class="button-subtask">
+        <ion-item class="petrus">
+          <ion-icon item-start name="radio-button-off"></ion-icon>
+          <ion-input type="text" [(ngModel)]="subtask" placeholder="Add a new subtask" style="background-color:transparent"></ion-input>
+        </ion-item>
+      </button>
+ 
+    </ion-card-title>
+
+    <ion-card-content class="card-content-notes">
+
+      <ion-item *ngIf="showDate" class="myitem">
+        <ion-label class="label-modal">
+          <ion-datetime displayFormat="DDD, DD MMM YY"
+            dayShortNames="sunday, monday, tuesday, wednesday, thursday, friday" pickerFormat="DD MMM YY"
+            [(ngModel)]="myDate"></ion-datetime>
+        </ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+
+      <ion-item *ngIf="showTime" class="myitem">
+        <ion-label class="label-modal">
+          <ion-datetime displayFormat="HH:mm" pickerFormat="HH:mm"
+            [(ngModel)]="myHour"></ion-datetime>
+        </ion-label>
+        <ion-toggle checked="true"></ion-toggle>
+      </ion-item>
+
+      <ion-item clas="myitem" style="padding-left: 0px;">
+        <div class="maps">
+            <google-places (setAddress)="getAddress($event)" *ngIf="showLoc"></google-places>
+            {{ selectedLocation }}
+        </div>       
+      </ion-item>
+    </ion-card-content> 
+
+
+  </ion-card>
+
+</ion-content>

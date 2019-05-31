@@ -19,7 +19,7 @@ export class GooglePlacesComponent implements OnInit, AfterViewInit {
     ngOnInit() {
     }
 
-    ngAfterViewInit() {
+    ngAfterViewInit() { 
         this.getPlaceAutocomplete();
     }
 

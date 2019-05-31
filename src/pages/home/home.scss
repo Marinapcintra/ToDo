@@ -2,7 +2,7 @@ page-home {
 
 
    .back{
-      background-color: rgb(231, 241, 241) !important;
+      background-color: #3f51b5b0 !important;
     }
 
     .logo {
@@ -23,6 +23,7 @@ page-home {
     .card {
       margin-top: 100px;
       height: 400px;
+      border-radius: 10px;
     }
 
     .card-content {

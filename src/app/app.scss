@@ -27,7 +27,18 @@
         border-top-right-radius: 12px;
         
     } 
-    ion-modal ion-backdrop {
-        visibility: unset !important;
-    }
 }
+        ion-modal.teimosa ion-backdrop {
+            visibility: visible !important;
+        }
+        
+        .picker-button{
+            color: #1a237e !important;
+        }
+    
+        .picker-opt.picker-opt-selected{
+            color: #1a237e !important;
+        }
+        
+        
+        

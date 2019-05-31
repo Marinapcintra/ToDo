@@ -5,22 +5,29 @@ page-news {
     }
 
     .content-background{
-        background-color: lightgray; 
+        background-color: #1a237e; 
     }
 
     .list-layout{ 
-        background-color: lightgray;
+        background-color: white;
         border-block-end: 2em;
     }
 
     .button-background{
-        background-color: gainsboro; 
-        height: 60px;
+        background-color: #d3d3d3ad; 
+        height: 8%;
     }
     
     .button{
-        border-radius: 10px;
-        height: 2.4em;
+        border-radius: 30px;
+        height: 75%;
+        vertical-align: middle;        
+    }
+
+    .button-special{
+        background-color: white;    
+        margin-left: 6px;
+        margin-right: 6px;
     }
 
     .text-input{
@@ -37,5 +44,35 @@ page-news {
     right: 0;
     top: 0;
     }
-    
+
+    .item-inner > ion-icon {
+        min-height: 2.8rem;
+        font-size: 2.0rem !important;
+        line-height: 1;
     }
+
+    .disable-hover {
+        padding-right: 0em !important;
+    }
+
+    .iconImportant{
+        font-size: 1.8em;
+        color: #1a237e;
+    }
+
+    .slide{
+        background-color: #9e9e9e4d;
+    }
+    
+    .my-class1{
+        text-decoration-line: line-through;
+    }
+
+    .my-class2{
+        text-decoration-line: none;
+    }
+
+    .col{
+        padding: 0px;
+    }
+}

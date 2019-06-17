@@ -1,6 +1,6 @@
 import { Task } from './../../models/task.models';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ModalController, ToastController } from 'ionic-angular';
 import * as moment from 'moment';
 
 
@@ -22,12 +22,13 @@ export class CalendarPage {
   public lista: Task[] = [];
   public description: string; 
   public myDate = new Date().toISOString();
-  public myHour = new Date().toISOString();  
-
+  public myHour = new Date().toISOString(); 
+  
   constructor(public navCtrl: NavController, 
               public navParams: NavParams,
               private modalCtrl: ModalController,
-              private alertCtrl: AlertController) {
+              private alertCtrl: AlertController,
+              public toastCtrl: ToastController,) {
   
   this.lista = this.navParams.get("tasks");
   const task: Task = this.navParams.get('task');
